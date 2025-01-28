@@ -17,7 +17,7 @@ function Header() {
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto d-flex gap-3">
             {/* <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">About</Nav.Link>
             <Nav.Link href="#link">Profile</Nav.Link>
@@ -25,10 +25,11 @@ function Header() {
 
  {/* c- here instead of using href we will be using link */}
  {/* c- here we are linking and referring it to the path in router */}
-            <Nav.Link> <Link to={'/'}>Home</Link> </Nav.Link>
-            <Nav.Link> <Link to={'about'}>About</Link> </Nav.Link>
-            <Nav.Link> <Link to={'profile'}>Profile</Link> </Nav.Link>
-            <Nav.Link> <Link to={'login'}>Login</Link> </Nav.Link>
+ {/* c- Nav link is removed to avoid errors */}
+            <Link to={'/'}>Home</Link> 
+            <Link to={'about'}>About</Link>
+            <Link to={'profile'}>Profile</Link>
+            <Link to={'login'}>Login</Link>
             
           </Nav>
         </Navbar.Collapse>

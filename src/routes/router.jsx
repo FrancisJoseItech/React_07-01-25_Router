@@ -5,7 +5,7 @@ import Homepage from "../Pages/Homepage";
 import Aboutpage from "../Pages/Aboutpage";
 import Footer from "../componenets/Footer";
 import Userlayout from "../layouts/Userlayout";
-
+import ProductDetails, { getProductDetails } from "../Pages/ProductDetails";
 
 
 // exporting the const route for using it elsewhere
@@ -53,8 +53,22 @@ export  const route = createBrowserRouter([
             {
                 path:'profile',
                 element: <h3>Give your Profile</h3>
-            }
-    
+            },
+
+            {
+                // path:'productdetails/1',
+                // c- id is a variable here and it is given to make the store the id dynamically
+                // when the route is hit path:'productdetails/:id' we want the function to work; and after getting the response we need to show the
+                //  directing element; this productdetails/:id is passed from productcard cpmponent through Link to
+                path:'productdetails/:id',
+                element:<ProductDetails/>,
+                // c-getProductDetails function is imported
+                // c- Loader is used to call the getproductDetail function
+                // c-only after the loader return the response; then only ProductDetails component is rendered
+                loader:getProductDetails
+                
+                
+            }  
             
         ]
 

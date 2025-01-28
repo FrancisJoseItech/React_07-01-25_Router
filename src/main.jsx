@@ -54,5 +54,6 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 
-// So here basically first router provider router will call the route and trigger
-//  the creteBrowserRouter function and on identification of the path it will render the element
+// -c Basically first triggering will happen with Router provider Router;
+// So here basically first router provider router will call the const route and trigger based on the given path
+//  the creteBrowserRouter function on identification of the path it will render the element

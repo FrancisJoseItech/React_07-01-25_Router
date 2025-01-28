@@ -26,3 +26,5 @@ function App() {
 }
 
 export default App
+
+// c- routerprovide router will go to the const rout and identify the path given for routing
