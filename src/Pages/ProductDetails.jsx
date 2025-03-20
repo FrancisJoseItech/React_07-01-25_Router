@@ -65,7 +65,7 @@ console.log(product,"product data loader");
   return (
     <div>
         {/* c-if the state product exist */}
-        <img src={product?.image} alt="" className='productImage'/>
+        <img src={product?.data.image} alt="" className='productImage'/>
         <p>{product?.description}</p>
 
     </div>
