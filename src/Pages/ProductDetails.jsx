@@ -9,7 +9,7 @@ import { useLoaderData, useParams } from 'react-router-dom'
 // c- exporting this function to make it available in the router
 //c-res.data and similar is product.data as the object comes in that key
 // c-params in the browser is passed to the function; params is a variable here
-export  async function getProductDetails(params){
+export  async function getProductDetails({params}){
     try{
         //c- api hit will happen and the value and the object get stored in product
         // c-params value is accessed here ${params.id}
@@ -21,6 +21,7 @@ export  async function getProductDetails(params){
         return product.data
     }catch(error){
         console.log(err)
+        return null
 
     }
 // async function getProductDetails(){
@@ -65,7 +66,7 @@ console.log(product,"product data loader");
   return (
     <div>
         {/* c-if the state product exist */}
-        <img src={product?.data.image} alt="" className='productImage'/>
+        <img src={product?.image} alt="" className='productImage'/>
         <p>{product?.description}</p>
 
     </div>
