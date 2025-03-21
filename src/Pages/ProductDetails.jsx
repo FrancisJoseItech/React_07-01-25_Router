@@ -32,46 +32,46 @@ export  async function getProductDetails({params}){
 
 function ProductDetails() {
 
-    // // c-here inside the useState object is defined as we will be assessing an object here
-    // const[product,setProduct]= useState({})
+    // c-here inside the useState object is defined as we will be assessing an object here
+    const[product,setProduct]= useState({})
 
     // // c- useParams is used to get the product id in the browser; this can be seen the browser when each cards button is clicked
     // // const productId= useParams()
     // // console.log(productId,"productId");
 
-    // // c- this will be same like taking the id from router; accessing directly like the props
-    // const {id}=useParams()
-    // console.log(id,"productId");
+    // c- this will be same like taking the id from router; accessing directly like the props
+    const {id}=useParams()
+    console.log(id,"productId");
 
-    // // c- Useeffect is used to render a new update or page by hitting api based on the id
-    //     useEffect(()=>{
-    //         // c-back slash is used; since axious is already instaled it is imported here
-    //         //c- ${id} is given to make it dynamic; it is the same id obtained through useParams
-    //         axios.get(`https://fakestoreapi.com/products/${id}`).then((res)=>{
-    //             //c-response in the object comes in the data key
-    //             console.log(res.data);
-    //             //c- here the state is updated with the response data using setproduct
-    //             setProduct(res.data)
+    // c- Useeffect is used to render a new update or page by hitting api based on the id
+        useEffect(()=>{
+            // c-back slash is used; since axious is already instaled it is imported here
+            //c- ${id} is given to make it dynamic; it is the same id obtained through useParams
+            axios.get(`https://fakestoreapi.com/products/${id}`).then((res)=>{
+                //c-response in the object comes in the data key
+                console.log(res.data);
+                //c- here the state is updated with the response data using setproduct
+                setProduct(res.data)
                 
 
-    //         }).catch((err)=>{
-    //             console.log(err);
-    //         })
-    //     })
+            }).catch((err)=>{
+                console.log(err);
+            })
+        })
 
 
 // c-useLoaderdata is used to access the product returned from getProductDetails and to make it accessible in the component ProductDetails
-const product= useLoaderData()
-console.log(product,"product data loader");
-  return (
-    <div>
-        {/* c-if the state product exist */}
-        <img src={product?.image} alt="" className='productImage'/>
-        <p>{product?.description}</p>
+// const product= useLoaderData()
+// console.log(product,"product data loader");
+//   return (
+//     <div>
+//         {/* c-if the state product exist */}
+//         <img src={product?.image} alt="" className='productImage'/>
+//         <p>{product?.description}</p>
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
 export default ProductDetails
 
