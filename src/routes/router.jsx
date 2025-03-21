@@ -65,7 +65,7 @@ export  const route = createBrowserRouter([
                 // c-getProductDetails function is imported
                 // c- Loader is used to call the getproductDetail function
                 // c-only after the loader return the response; then only ProductDetails component is rendered
-                // loader:getProductDetails
+                loader:getProductDetails
                 
                 
             }  

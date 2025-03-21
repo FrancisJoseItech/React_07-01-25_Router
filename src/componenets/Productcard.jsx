@@ -21,7 +21,7 @@ function Productcard({item}) {
         {/* c-link from router is imported and the exisiting button is placed here; inside the Link to is given to the direction element; we are using link here 
         for navigating;onclick is used when we need to bring in logics */}
         {/* c-using template literals to link string and js */}
-        <Link to={`productdetails/${item.id}`}><Button variant="primary">View Product</Button></Link>
+        <Link to={`/productdetails/${item.id}`}><Button variant="primary">View Product</Button></Link>
       </Card.Body>
     </Card>
   );
